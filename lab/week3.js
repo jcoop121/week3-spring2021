@@ -31,8 +31,12 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // PART 1
   // Figure out how products there are, and store that number in memory
+  let numberProduct = (data.products.length)
+  console.log(`There are ${numberProduct} products`)
 
   // Figure out how promotions there are, and store that number in memory
+  let numberPromotions = (data.promotions.length)
+  console.log(`There are ${numberPromotions} promotions`)
 
   // Write the number of products to the JavaScript console
 
@@ -40,28 +44,58 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // PART 2
   // Store the first product in memory
+  let Product1 = (data.products [0]) 
 
   // Write the first product to the JavaScript console, on three separate lines
+  console.log(Product1.description)
+  console.log(Product1.name)
+  console.log(Product1.price)
 
   // Repeat for the 2nd and 3rd products
+  let Product2 = (data.products [1])   
+  console.log(Product2.description)
+  console.log(Product2.name)
+  console.log(Product2.price)
+
   // Store the second product in memory
+
 
   // Write the product to the JavaScript console, on three separate lines
   
   // Store the third product in memory
+  let Product3 = (data.products [2])  
 
   // Write the product to the JavaScript console, on three separate lines
+  console.log(Product3.description)
+  console.log(Product3.name)
+  console.log(Product3.price)
 
   // PART 3
   // Get a random integer between 1 and 10
+  let randomNumber = getRandomInt(10) - 1
+  console.log(randomNumber)
 
   // Subtract one from that random integer because Arrays are zero-based
+  
 
   // Use the random integer to grab a promotion from the Array of promotions
   // and store it in memory
+  let selectPromo = (data.promotions[randomNumber])
+  console.log(selectPromo)
   
   // Figure out which emoji should be displayed, store it in memory (you will need
   // an empty variable for this before you write any conditional)
+  let emoji 
+  
+  if (selectPromo.type == `Discount`) {
+    emoji = `🤑` 
+  } else if (selectPromo.type == `Shipping`){
+    emoji = `🚛` 
+  } else {
+    emoji = `🏆`
+      }
+  console.log(`The Emoji is ${emoji} and the description is ${selectPromo.description}`)
+  
 
   // Create a sentence that displays the emoji along with the description 
   // of the promotion
